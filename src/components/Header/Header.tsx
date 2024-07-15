@@ -1,14 +1,17 @@
 import styled from 'styled-components'
 import { Logo } from './components/Logo/Logo'
 import { Cart } from './components/Cart/Cart'
-
+import { Link } from 'react-router-dom'
+import { AppRoutes } from '../../core/routes'
 export const Header = () => {
   return (
     <Wrapper>
       <RowAligner>
         <LogoContainer>
-          <LogoLink href="https://aliexpress.ru/">
-            <Logo />
+          <LogoLink>
+            <Link to={AppRoutes.main}>
+              <Logo />
+            </Link>
           </LogoLink>
         </LogoContainer>
       </RowAligner>
@@ -28,7 +31,6 @@ export const Header = () => {
 const Wrapper = styled.header`
   align-items: center;
   background-color: #fe2722;
-  border: 1px solid #de2622;
   border-radius: 6px;
   flex-direction: row;
   grid-gap: 0;
@@ -47,7 +49,7 @@ const RowAligner = styled.div`
 
 const LogoContainer = styled.div``
 
-const LogoLink = styled.a`
+const LogoLink = styled.div`
   display: flex;
   align-items: center;
 `

@@ -7,4 +7,5 @@ export interface IProduct {
   discountedPrice: number
   discountPercentage: number
   deliveryTime: number
+  deliveryType: 1 | 2
 }

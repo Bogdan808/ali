@@ -39,7 +39,6 @@ export const ProductCard = ({ product }: IProductCardProps) => {
 
 const Wrapper = styled.div`
   /* стили для контейнера карточки */
-  max-width: 300px;
   font-size: 13px;
 `
 

@@ -1,4 +1,4 @@
-import { ProductCard } from '../../components/ProductCard/ProductCard'
+import { ProductCard } from '../../components/productCard/ProductCard'
 import styled from 'styled-components'
 import { products } from '../../mocks/productsList'
 

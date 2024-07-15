@@ -1,4 +1,4 @@
-import { Header } from '../Header'
+import { Header } from '../header'
 import styled from 'styled-components'
 
 export const Layout = ({ children }) => {
@@ -18,6 +18,7 @@ const Wrapper = styled.div`
   align-items: center;
   gap: 16px;
   padding: 16px;
+  background: #f3f4f5;
 `
 const Container = styled.div`
   max-width: 1200px;

@@ -1,6 +1,6 @@
 {
   "name": "ali",
-  "description": "The test project for the guys from Holland",
+  "description": "The test project for the guys from Hollandn",
   "version": "0.1.0",
   "private": true,
   "type": "module",
@@ -20,8 +20,15 @@
     "build-storybook": "storybook build"
   },
   "dependencies": {
+    "@types/styled-components": "^5.1.34",
     "react": "^18.3.1",
-    "react-dom": "^18.3.1"
+    "react-dom": "^18.3.1",
+    "styled-components": "^6.1.11",
+    "zustand": "^4.5.2",
+    "@fortawesome/fontawesome-svg-core": "^6.5.2",
+    "@fortawesome/free-solid-svg-icons": "^6.5.2",
+    "@fortawesome/react-fontawesome": "^0.2.2",
+    "leiten-zustand": "^1.5.9"
   },
   "devDependencies": {
     "@chromatic-com/storybook": "^1.6.1",

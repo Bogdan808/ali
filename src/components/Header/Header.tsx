@@ -1,0 +1,68 @@
+import styled from 'styled-components'
+import { Logo } from './components/Logo/Logo'
+import { Cart } from './components/Cart/Cart'
+
+export const Header = () => {
+  return (
+    <Wrapper>
+      <RowAligner>
+        <LogoContainer>
+          <LogoLink href="https://aliexpress.ru/">
+            <Logo />
+          </LogoLink>
+        </LogoContainer>
+      </RowAligner>
+      <RowAligner>
+        <Nav>
+          <NavList>
+            <NavItem>
+              <Cart />
+            </NavItem>
+          </NavList>
+        </Nav>
+      </RowAligner>
+    </Wrapper>
+  )
+}
+
+const Wrapper = styled.header`
+  align-items: center;
+  background-color: #fe2722;
+  border: 1px solid #de2622;
+  border-radius: 6px;
+  flex-direction: row;
+  grid-gap: 0;
+  margin-top: 12px;
+  padding: 8px;
+  top: 0;
+  display: flex;
+  justify-content: space-between;
+`
+
+const RowAligner = styled.div`
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+`
+
+const LogoContainer = styled.div``
+
+const LogoLink = styled.a`
+  display: flex;
+  align-items: center;
+`
+
+const Nav = styled.nav`
+  display: flex;
+`
+
+const NavList = styled.ul`
+  list-style: none;
+  display: flex;
+  margin: 0;
+  padding: 0;
+`
+
+const NavItem = styled.li`
+  margin-right: 1rem;
+`

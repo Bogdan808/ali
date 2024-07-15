@@ -4,7 +4,7 @@ import Home from '../pages/Main'
 import Products from '../pages/Products'
 import Cart from '../pages/Cart'
 import Checkout from '../pages/Checkout'
-import { Layout } from './Layout/Layout'
+import { Layout } from './layout/Layout'
 import ProductDetails from '../pages/ProductDetails'
 
 function App() {

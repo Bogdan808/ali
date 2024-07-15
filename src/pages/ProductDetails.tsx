@@ -1,9 +1,9 @@
 import React from 'react'
 import { useParams } from 'react-router-dom'
-import { ProductCard } from '../components/ProductCard/ProductCard'
+import { ProductCard } from '../components/productCard/ProductCard'
 import { products } from '../mocks/productsList'
 import styled from 'styled-components'
-import CartButton from '../components/CartButton/CartButton'
+import CartButton from '../components/cartButton/CartButton'
 
 const ProductDetails: React.FC = () => {
   const { id } = useParams<{ id: string }>()

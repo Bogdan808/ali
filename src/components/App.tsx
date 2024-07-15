@@ -5,10 +5,7 @@ import Products from '../pages/Products'
 import Cart from '../pages/Cart'
 import Checkout from '../pages/Checkout'
 import { Layout } from './Layout/Layout'
-
-function Product() {
-  return null
-}
+import ProductDetails from '../pages/ProductDetails'
 
 function App() {
   return (
@@ -17,7 +14,7 @@ function App() {
         <Routes>
           <Route path={AppRoutes.main} element={<Home />} />
           <Route path={AppRoutes.products} element={<Products />} />
-          <Route path={AppRoutes.productsId} element={<Product />} />
+          <Route path={AppRoutes.productsId} element={<ProductDetails />} />
           <Route path={AppRoutes.cart} element={<Cart />} />
           <Route path={AppRoutes.checkout} element={<Checkout />} />
         </Routes>

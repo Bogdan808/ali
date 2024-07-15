@@ -3,37 +3,43 @@ import { IProduct } from '../../types/data'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faTruck } from '@fortawesome/free-solid-svg-icons/faTruck'
 import { faStar } from '@fortawesome/free-solid-svg-icons/faStar'
+import { Link } from 'react-router-dom'
+import { generateLink } from '../../core/helpers/generateLink'
+import { AppRoutes } from '../../core/routes'
 
 interface IProductCardProps {
   product: IProduct
 }
 export const ProductCard = ({ product }: IProductCardProps) => {
+  const link = generateLink(AppRoutes.productsId, { id: String(product.id) })
   return (
-    <Wrapper>
-      <Image>
-        <ProductImage src={product.image} alt={product.name} />
-      </Image>
-      <Name>{product.name}</Name>
-      <Info>
-        <Rating>
-          <RatingIcon icon={faStar} />
-          <RatingValue>{product.rating}</RatingValue>
-        </Rating>
-        <ProductReviews>{product.reviews} купили</ProductReviews>
-      </Info>
-      <Price>
-        <OriginalPrice>${product.originalPrice}</OriginalPrice>
-        <DiscountPercentage>{product.discountPercentage}%</DiscountPercentage>
-      </Price>
-      <DiscountedPrice>${product.discountedPrice}</DiscountedPrice>
-      <Delivery>
-        <DeliveryTime>
-          <DeliveryTruckIcon icon={faTruck} />
-          до {product.deliveryTime} дней
-        </DeliveryTime>
-        <DeliveryType>мгновенная отправка</DeliveryType>
-      </Delivery>
-    </Wrapper>
+    <Link to={link}>
+      <Wrapper>
+        <Image>
+          <ProductImage src={product.image} alt={product.name} />
+        </Image>
+        <Name>{product.name}</Name>
+        <Info>
+          <Rating>
+            <RatingIcon icon={faStar} />
+            <RatingValue>{product.rating}</RatingValue>
+          </Rating>
+          <ProductReviews>{product.reviews} купили</ProductReviews>
+        </Info>
+        <Price>
+          <OriginalPrice>${product.originalPrice}</OriginalPrice>
+          <DiscountPercentage>{product.discountPercentage}%</DiscountPercentage>
+        </Price>
+        <DiscountedPrice>${product.discountedPrice}</DiscountedPrice>
+        <Delivery>
+          <DeliveryTime>
+            <DeliveryTruckIcon icon={faTruck} />
+            до {product.deliveryTime} дней
+          </DeliveryTime>
+          <DeliveryType>мгновенная отправка</DeliveryType>
+        </Delivery>
+      </Wrapper>
+    </Link>
   )
 }
 

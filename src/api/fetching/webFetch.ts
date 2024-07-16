@@ -1,11 +1,13 @@
 import axios, { AxiosRequestConfig, AxiosResponse } from 'axios'
 
-interface FetchOptions extends AxiosRequestConfig {}
+interface FetchOptions extends AxiosRequestConfig {
+  signal?: AbortSignal
+}
 
 const webFetch = async <T>(
   url: string,
   options: FetchOptions = {}
-): Promise<T> => {
+): Promise<T | null | void> => {
   try {
     const response: AxiosResponse<T> = await axios.request<T>({
       url,
@@ -20,7 +22,7 @@ const webFetch = async <T>(
       }
       throw new Error(`Fetch error: ${error.message}`)
     }
-    throw new Error(`Unknown error: ${error}`)
+    return null
   }
 }
 

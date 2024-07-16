@@ -15,25 +15,15 @@ export namespace ProductsApi {
     deliveryTime: number
     deliveryType: 1 | 2
   }
-  interface IPostResponse extends IProduct {}
-  interface IGetResponse extends IProduct {}
-  export const get = async (): Promise<IGetResponse[]> => {
-    return webFetch<IGetResponse[]>(link, {
+
+  export const get = async () => {
+    return webFetch<IProduct[]>(link, {
       method: 'GET'
     })
   }
-  export const post = async (data: IPostResponse): Promise<IProduct> => {
-    return webFetch<IProduct>(link, {
-      method: 'POST',
-      data,
-      headers: {
-        'Content-Type': 'application/json'
-      }
-    })
-  }
 
-  export const getProductById = async (id: number): Promise<IGetResponse> => {
-    return webFetch<IGetResponse>(`${link}/${id}`, {
+  export const getProductById = async (id: number) => {
+    return webFetch<IProduct>(`${link}/${id}`, {
       method: 'GET'
     })
   }

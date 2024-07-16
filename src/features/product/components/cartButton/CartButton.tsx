@@ -1,15 +1,14 @@
-// CartButton.tsx
 import React, { useState } from 'react'
 import styled from 'styled-components'
-import { Button } from '../../ui/button/Button'
-interface CartButtonProps {
-  price: number
-}
-const CartButton = ({ price }: CartButtonProps) => {
-  const [count, setCount] = useState<number>(1)
+import { Button } from '../../../../ui/button/Button'
+import { useProductFeature } from '../../store/productStore'
 
-  const increment = () => setCount(count + 1)
-  const decrement = () => setCount(count > 1 ? count - 1 : 1)
+const CartButton = () => {
+  const { useStore, useQuantityController, decrementAction, incrementAction } =
+    useProductFeature()
+  const { originalPrice, discountedPrice } = useStore((s) => s.product)
+  const quantity = useStore((s) => s.quantity)
+  const price = discountedPrice || originalPrice
 
   return (
     <Wrapper>
@@ -18,13 +17,16 @@ const CartButton = ({ price }: CartButtonProps) => {
           <Button>Add to Cart</Button>
         </Action>
         <Counter>
-          <CounterButton onClick={decrement}>-</CounterButton>
-          <Count>{count}</Count>
-          <CounterButton onClick={increment}>+</CounterButton>
+          <CounterButton onClick={decrementAction}>-</CounterButton>
+          <Count
+            value={quantity}
+            onChange={(event) => useQuantityController.set(event.target.value)}
+          />
+          <CounterButton onClick={incrementAction}>+</CounterButton>
         </Counter>
       </Container>
       <Footer>
-        Total: <strong>{count * price} $</strong>
+        Total: <strong>{quantity * Number(price)} $</strong>
       </Footer>
     </Wrapper>
   )
@@ -54,7 +56,7 @@ const CounterButton = styled.button`
   cursor: pointer;
 `
 
-const Count = styled.span`
+const Count = styled.input.attrs({ type: 'number' })`
   font-size: 16px;
   padding: 0 10px;
 `

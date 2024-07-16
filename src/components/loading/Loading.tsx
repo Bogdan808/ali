@@ -33,10 +33,11 @@ const SpinnerIcon = styled(FontAwesomeIcon)`
   font-size: 2rem;
 `
 
-// Create a wrapper component to center the spinner
 const LoadingWrapper = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
   height: 100vh;
+  width: 100%;
+  min-height: 200px;
 `

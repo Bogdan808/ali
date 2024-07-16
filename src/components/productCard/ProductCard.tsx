@@ -6,11 +6,12 @@ import { faStar } from '@fortawesome/free-solid-svg-icons/faStar'
 import { Link } from 'react-router-dom'
 import { generateLink } from '../../core/helpers/generateLink'
 import { AppRoutes } from '../../core/routes'
+import { ProductsApi } from '../../requests/products'
 
 type IProductCardTheme = 'card' | 'list'
 
 interface IProductCardProps {
-  product: IProduct
+  product: ProductsApi.IProduct
   theme?: IProductCardTheme | undefined
 }
 export const ProductCard = ({ product, theme = 'list' }: IProductCardProps) => {

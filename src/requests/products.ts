@@ -31,4 +31,10 @@ export namespace ProductsApi {
       }
     })
   }
+
+  export const getProductById = async (id: number): Promise<IGetResponse> => {
+    return webFetch<IGetResponse>(`${link}/${id}`, {
+      method: 'GET'
+    })
+  }
 }

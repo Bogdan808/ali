@@ -6,7 +6,7 @@ import { AppRoutes } from '../core/routes'
 const Home: React.FC = () => {
   return (
     <>
-      <Breadcrumbs paths={[{ name: 'Home', link: AppRoutes.main }]} />
+      <Breadcrumbs />
       <ProductList />
     </>
   )

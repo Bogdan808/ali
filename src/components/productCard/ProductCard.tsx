@@ -55,7 +55,7 @@ const Image = styled.div<{ $theme?: IProductCardTheme }>`
   border-radius: 16px;
   width: 100%;
   position: relative;
-  //set css theme
+  margin-bottom: 16px;
   ${({ $theme }) =>
     $theme === 'list' &&
     css`

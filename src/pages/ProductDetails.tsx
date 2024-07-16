@@ -4,13 +4,14 @@ import { ProductCard } from '../components/productCard/ProductCard'
 import { products } from '../mocks/productsList'
 import styled from 'styled-components'
 import CartButton from '../components/cartButton/CartButton'
+import { Breadcrumbs } from '../components/breadcrumbs/Breadcrumbs'
 
 const ProductDetails: React.FC = () => {
   const { id } = useParams<{ id: string }>()
   const product = products.find((product) => product.id === Number(id))
   return (
     <>
-      <h2>Product Details</h2>
+      <Breadcrumbs paths={[{ name: 'Product' }]} />
       <Content>
         <Product>
           {product && <ProductCard theme={'card'} product={product} />}

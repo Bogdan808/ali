@@ -1,21 +1,29 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import styled from 'styled-components'
-
+import { AppRoutes } from '../../core/routes'
+interface BreadcrumbsProps {
+  paths?: { name: string; link?: string }[]
+}
 export const Breadcrumbs: React.FC<BreadcrumbsProps> = ({ paths }) => {
   return (
     <Wrapper>
-      {paths.map((path, index) => (
-        <Crumb key={index}>
-          <BreadcrumbLink to={path.link}>{path.name}</BreadcrumbLink>
-        </Crumb>
-      ))}
+      <Crumb>
+        <BreadcrumbLink to={AppRoutes.main}>Home</BreadcrumbLink>
+      </Crumb>
+      {paths &&
+        paths.map((path, index) => (
+          <Crumb key={index}>
+            {path?.link && (
+              <span>
+                <BreadcrumbLink to={path.link}>{path.name}</BreadcrumbLink>{' '}
+              </span>
+            )}
+            {!path?.link && <span>{path.name}</span>}
+          </Crumb>
+        ))}
     </Wrapper>
   )
-}
-
-interface BreadcrumbsProps {
-  paths: { name: string; link: string }[]
 }
 
 const Wrapper = styled.nav`

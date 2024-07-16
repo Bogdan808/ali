@@ -10,6 +10,7 @@ const meta = {
   },
   args: {
     product: {
+      id: 1,
       name: 'Example Product',
       image: '/products/1/1.webp',
       rating: 4.5,
@@ -18,7 +19,7 @@ const meta = {
       discountedPrice: 90,
       discountPercentage: 25,
       deliveryTime: 3,
-      deliveryType: 'мгновенная отправка'
+      deliveryType: 1
     }
   }
 } satisfies Meta<typeof ProductCard>

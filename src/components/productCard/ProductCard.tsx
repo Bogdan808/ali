@@ -1,4 +1,4 @@
-import styled from 'styled-components'
+import styled, { css } from 'styled-components'
 import { IProduct } from '../../types/data'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faTruck } from '@fortawesome/free-solid-svg-icons/faTruck'
@@ -7,16 +7,19 @@ import { Link } from 'react-router-dom'
 import { generateLink } from '../../core/helpers/generateLink'
 import { AppRoutes } from '../../core/routes'
 
+type IProductCardTheme = 'card' | 'list'
+
 interface IProductCardProps {
   product: IProduct
+  theme?: IProductCardTheme | undefined
 }
-export const ProductCard = ({ product }: IProductCardProps) => {
+export const ProductCard = ({ product, theme = 'list' }: IProductCardProps) => {
   const link = generateLink(AppRoutes.productsId, { id: String(product.id) })
   return (
     <Link to={link}>
       <Wrapper>
-        <Image>
-          <ProductImage src={product.image} alt={product.name} />
+        <Image $theme={theme}>
+          <ProductImage $theme={theme} src={product.image} alt={product.name} />
         </Image>
         <Name>{product.name}</Name>
         <Info>
@@ -44,19 +47,34 @@ export const ProductCard = ({ product }: IProductCardProps) => {
 }
 
 const Wrapper = styled.div`
-  /* стили для контейнера карточки */
   font-size: 13px;
 `
 
-const ProductImage = styled.img`
-  /* стили для изображения продукта */
-  width: 100%;
-`
-
-const Image = styled.div`
-  /* стили для карусели изображений */
+const Image = styled.div<{ $theme?: IProductCardTheme }>`
   overflow: hidden;
   border-radius: 16px;
+  width: 100%;
+  position: relative;
+  //set css theme
+  ${({ $theme }) =>
+    $theme === 'list' &&
+    css`
+      height: 200px; /* Установите максимальную высоту для изображения */
+    `}
+`
+
+const ProductImage = styled.img<{ $theme?: IProductCardTheme }>`
+  width: 100%;
+  height: 100%;
+
+  ${({ $theme }) =>
+    $theme === 'list' &&
+    css`
+      object-fit: cover; /* This will ensure the image covers the container without stretching */
+      position: absolute;
+      top: 0;
+      left: 0;
+    `}
 `
 
 const Name = styled.h3`
@@ -67,7 +85,6 @@ const Info = styled.div`
   display: flex;
   gap: 8px;
   align-items: center;
-  /* стили для типа доставки */
 `
 
 const Rating = styled.div`
@@ -79,13 +96,9 @@ const RatingIcon = styled(FontAwesomeIcon)`
   font-size: 13px;
   color: #cc290a;
 `
-const RatingValue = styled.div`
-  /* стили для рейтинга продукта */
-`
+const RatingValue = styled.div``
 
-const ProductReviews = styled.div`
-  /* стили для количества отзывов */
-`
+const ProductReviews = styled.div``
 
 // Price
 const Price = styled.div`
@@ -111,7 +124,6 @@ const DiscountPercentage = styled.div`
 
 // Delivery
 const Delivery = styled.div`
-  /* стили для цены со скидкой */
   color: #00ab11;
   margin-top: 8px;
 `
@@ -121,10 +133,7 @@ const DeliveryTruckIcon = styled(FontAwesomeIcon)`
 `
 
 const DeliveryTime = styled.div`
-  /* стили для времени доставки */
   margin-bottom: 4px;
 `
 
-const DeliveryType = styled.div`
-  /* стили для типа доставки */
-`
+const DeliveryType = styled.div``

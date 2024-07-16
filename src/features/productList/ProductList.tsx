@@ -4,6 +4,7 @@ import {
   ProductListProvider,
   useProductListFeature
 } from './store/productListStore'
+import { Loading } from '../../components/loading/Loading'
 
 export const ProductList = () => {
   return (
@@ -15,19 +16,23 @@ export const ProductList = () => {
 
 export const ProductListFeature = () => {
   const { useStore, useRequest } = useProductListFeature()
-  const products = useStore((state) => state.data)
-  const status = useRequest().status
+  const products = useStore((state) => state.products)
+  const status = useRequest((s) => s.status)
+
   return (
-    <Wrapper>
-      {status === 'loading' && <div>Loading...</div>}
-      {!products && status === 'Loaded' && <div>No products found</div>}
-      {products &&
-        products.map((product, index) => (
-          <Product key={index}>
-            <ProductCard product={product} />
-          </Product>
-        ))}
-    </Wrapper>
+    <>
+      <Loading status={status}>
+        <Wrapper>
+          {products &&
+            products.map((product, index) => (
+              <Product key={index}>
+                <ProductCard product={product} />
+              </Product>
+            ))}
+        </Wrapper>
+      </Loading>
+      {!products && status === 'loaded' && <div>No products found</div>}
+    </>
   )
 }
 

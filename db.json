@@ -3,7 +3,7 @@
     {
       "id": 1,
       "name": "LED Headlight Bulbs",
-      "image": "https://media.istockphoto.com/id/1478431022/photo/cars-for-sale-stock-lot-row.jpg?s=2048x2048&w=is&k=20&c=jMT0U_i1ATBLEGPjE6SIt2hBdG7BTttoT132Cj97zr4=",
+      "image": "/products/1.jpg",
       "rating": 4.7,
       "reviews": 124,
       "originalPrice": 50.0,
@@ -39,7 +39,7 @@
     {
       "id": 4,
       "name": "Car Vacuum Cleaner",
-      "image": "/products/4.jpg",
+      "image": "/products/4.webp",
       "rating": 4.5,
       "reviews": 172,
       "originalPrice": 80.0,
@@ -51,7 +51,7 @@
     {
       "id": 5,
       "name": "Car Seat Covers",
-      "image": "/products/5.jpg",
+      "image": "/products/5.webp",
       "rating": 4.6,
       "reviews": 110,
       "originalPrice": 40.0,
@@ -99,7 +99,7 @@
     {
       "id": 9,
       "name": "Portable Tire Inflator",
-      "image": "/products/9.jpg",
+      "image": "/products/Sarah Michelle Gellar - Lorenzo Agius PhotoShoot 01.jpg",
       "rating": 4.6,
       "reviews": 210,
       "originalPrice": 60.0,
@@ -111,7 +111,7 @@
     {
       "id": 10,
       "name": "Bluetooth Car Adapter",
-      "image": "/products/10.jpg",
+      "image": "/products/Sarah Michelle Gellar - Lorenzo Agius PhotoShoot 02.jpg",
       "rating": 4.5,
       "reviews": 190,
       "originalPrice": 20.0,
@@ -123,7 +123,7 @@
     {
       "id": 11,
       "name": "Car Battery Charger",
-      "image": "/products/11.jpg",
+      "image": "/products/Sarah Michelle Gellar - Lorenzo Agius PhotoShoot 03.jpg",
       "rating": 4.8,
       "reviews": 130,
       "originalPrice": 75.0,
@@ -135,7 +135,7 @@
     {
       "id": 12,
       "name": "Car Polisher",
-      "image": "/products/12.jpg",
+      "image": "/products/Sarah Michelle Gellar - Lorenzo Agius PhotoShoot 04.jpg",
       "rating": 4.6,
       "reviews": 85,
       "originalPrice": 100.0,
@@ -147,7 +147,7 @@
     {
       "id": 13,
       "name": "Windshield Sunshade",
-      "image": "/products/13.jpg",
+      "image": "/products/Sarah Michelle Gellar - Lorenzo Agius PhotoShoot 05.jpg",
       "rating": 4.3,
       "reviews": 105,
       "originalPrice": 15.0,
@@ -159,7 +159,7 @@
     {
       "id": 14,
       "name": "Car Phone Mount",
-      "image": "/products/14.jpg",
+      "image": "/products/Sarah Michelle Gellar - Lorenzo Agius PhotoShoot 06.jpg",
       "rating": 4.5,
       "reviews": 160,
       "originalPrice": 20.0,
@@ -171,7 +171,7 @@
     {
       "id": 15,
       "name": "Car Cover",
-      "image": "/products/15.jpg",
+      "image": "/products/Sarah Michelle Gellar - Lorenzo Agius PhotoShoot 07.jpg",
       "rating": 4.4,
       "reviews": 90,
       "originalPrice": 50.0,
@@ -183,7 +183,7 @@
     {
       "id": 16,
       "name": "Jump Starter",
-      "image": "/products/16.jpg",
+      "image": "/products/Sarah Michelle Gellar - Lorenzo Agius PhotoShoot 08.jpg",
       "rating": 4.8,
       "reviews": 200,
       "originalPrice": 120.0,
@@ -195,7 +195,7 @@
     {
       "id": 17,
       "name": "Seat Belt Cushion",
-      "image": "/products/17.jpg",
+      "image": "/products/Sarah Michelle Gellar - Lorenzo Agius PhotoShoot 09.jpg",
       "rating": 4.3,
       "reviews": 70,
       "originalPrice": 10.0,
@@ -207,7 +207,7 @@
     {
       "id": 18,
       "name": "Portable Car Heater",
-      "image": "/products/18.jpg",
+      "image": "/products/Sarah Michelle Gellar - Lorenzo Agius PhotoShoot 10.jpg",
       "rating": 4.4,
       "reviews": 115,
       "originalPrice": 40.0,
@@ -219,7 +219,7 @@
     {
       "id": 19,
       "name": "Car Organizer",
-      "image": "/products/19.jpg",
+      "image": "/products/Sarah Michelle Gellar - Lorenzo Agius PhotoShoot 11.jpg",
       "rating": 4.6,
       "reviews": 150,
       "originalPrice": 30.0,
@@ -231,7 +231,7 @@
     {
       "id": 20,
       "name": "Car Seat Protector",
-      "image": "/products/20.jpg",
+      "image": "/products/Sarah Michelle Gellar - Lorenzo Agius PhotoShoot 12.jpg",
       "rating": 4.5,
       "reviews": 120,
       "originalPrice": 35.0,
@@ -243,7 +243,7 @@
     {
       "id": 21,
       "name": "Car Trash Can",
-      "image": "/products/21.jpg",
+      "image": "/products/Sarah Michelle Gellar - Lorenzo Agius PhotoShoot 13.jpg",
       "rating": 4.3,
       "reviews": 80,
       "originalPrice": 15.0,
@@ -255,7 +255,7 @@
     {
       "id": 22,
     "name": "Car Duster",
-    "image": "/products/22.jpg",
+    "image": "/products/Sarah Michelle Gellar - Lorenzo Agius PhotoShoot 14.jpg",
     "rating": 4.4,
     "reviews": 95,
     "originalPrice": 18.0,
@@ -267,7 +267,7 @@
     {
       "id": 23,
     "name": "Car Cleaning Gel",
-    "image": "/products/23.jpg",
+    "image": "/products/Sarah Michelle Gellar - Lorenzo Agius PhotoShoot 15.jpg",
     "rating": 4.7,
     "reviews": 105,
     "originalPrice": 12.0,
@@ -279,7 +279,7 @@
     {
       "id": 24,
     "name": "Car Cup Holder Expander",
-    "image": "/products/24.jpg",
+    "image": "/products/Sarah Michelle Gellar - Lorenzo Agius PhotoShoot 16.jpg",
     "rating": 4.5,
     "reviews": 125,
     "originalPrice": 25.0,
@@ -302,3 +302,4 @@
   }
 ]
 }
+

@@ -3,16 +3,16 @@ import { IFeatureCreator, leitenFeature, leitenRequest } from 'leiten-zustand'
 import { ProductsApi } from '../../../requests/products'
 
 interface IState {
-  data: ProductsApi.IProduct[] | null
+  products: ProductsApi.IProduct[] | null
 }
 
 export const [useProductListFeature, ProductListProvider] = leitenFeature(
   ({ mount }: IFeatureCreator<null>) => {
     const useStore = create<IState>(() => ({
-      data: null
+      products: null
     }))
 
-    const useRequest = leitenRequest(useStore, 'data', async (_: void) => {
+    const useRequest = leitenRequest(useStore, 'products', async (_: void) => {
       return await ProductsApi.get()
     })
 

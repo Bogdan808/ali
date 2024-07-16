@@ -12,7 +12,9 @@ const ProductDetails: React.FC = () => {
     <>
       <h2>Product Details</h2>
       <Content>
-        <Product>{product && <ProductCard product={product} />}</Product>
+        <Product>
+          {product && <ProductCard theme={'card'} product={product} />}
+        </Product>
         <Actions>
           <CartButton price={9} />
         </Actions>

@@ -1,5 +1,5 @@
 import React from 'react'
-import CartList from '../components/cartItem/CartList'
+import CartList from '../components/cartList/CartList'
 
 const Cart: React.FC = () => {
   return (

@@ -1,5 +1,4 @@
 import styled, { css } from 'styled-components'
-import { IProduct } from '../../types/data'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faTruck } from '@fortawesome/free-solid-svg-icons/faTruck'
 import { faStar } from '@fortawesome/free-solid-svg-icons/faStar'

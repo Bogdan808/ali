@@ -1,10 +1,11 @@
 import React from 'react'
-import CartList from '../components/cartList/CartList'
+import CartList from '../features/cartList/CartList'
+import { Breadcrumbs } from '../components/breadcrumbs/Breadcrumbs'
 
 const Cart: React.FC = () => {
   return (
     <>
-      <h2>Shopping Cart</h2>
+      <Breadcrumbs paths={[{ name: 'Cart' }]} />
       <CartList />
     </>
   )

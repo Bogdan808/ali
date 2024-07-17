@@ -24,7 +24,7 @@ export const ProductFeature = () => {
   return (
     <>
       <Loading status={status}>
-        {product && <ProductCard product={product} />}
+        {product && <ProductCard theme={'card'} product={product} />}
         <Actions>
           <CartButton />
         </Actions>

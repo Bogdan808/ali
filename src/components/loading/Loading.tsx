@@ -15,7 +15,7 @@ const rotate = keyframes`
 interface ILoadingProps {
   status: ILoadingStatus
 }
-export const Loading: React.FC = ({ children, status }: ILoadingProps) => (
+export const Loading = ({ children, status }: ILoadingProps) => (
   <>
     {status === 'loading' && (
       <LoadingWrapper>

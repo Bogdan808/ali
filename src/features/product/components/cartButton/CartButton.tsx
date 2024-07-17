@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React from 'react'
 import styled from 'styled-components'
 import { Button } from '../../../../ui/button/Button'
 import { useProductFeature } from '../../store/productStore'
@@ -46,6 +46,7 @@ const Counter = styled.div`
   align-items: center;
   border: 1px solid #ddd;
   border-radius: 5px;
+  background: #fff;
 `
 
 const CounterButton = styled.button`

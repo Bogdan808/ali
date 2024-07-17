@@ -1,7 +1,8 @@
 import { Header } from '../../features/header'
 import styled from 'styled-components'
+import { ReactNode } from 'react'
 
-export const Layout = ({ children }) => {
+export const Layout = ({ children }: { children: ReactNode }) => {
   return (
     <Wrapper>
       <Container>

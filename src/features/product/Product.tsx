@@ -8,7 +8,7 @@ import styled from 'styled-components'
 import { useCommonStore } from '../../store/useCommonStore'
 
 export const Product = () => {
-  const { id } = useParams<{ id: number }>()
+  const { id } = useParams()
   // const setTriggerCart = useCommonStore((state) => state.setTriggerCart)
 
   return (

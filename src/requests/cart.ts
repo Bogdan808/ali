@@ -26,4 +26,9 @@ export namespace CartApi {
       data: JSON.stringify(order)
     })
   }
+  export const remove = async (id: string) => {
+    return webFetch<IOrder>(`${link}/${id}`, {
+      method: 'DELETE'
+    })
+  }
 }

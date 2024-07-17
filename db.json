@@ -291,14 +291,14 @@
   ],
   "cart": [
     {
-      "id": "1",
-      "productId": 1,
-      "quantity": 12
-    },
-    {
       "id": "2",
       "productId": 5,
       "quantity": 65
+    },
+    {
+      "id": "1153",
+      "productId": 2,
+      "quantity": 9
     }
   ]
 }

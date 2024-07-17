@@ -2,12 +2,24 @@ import { faShoppingCart } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import styled from 'styled-components'
 
+import { CartProvider, useCartFeature } from './store/cartStore'
+
 export const Cart = () => {
+  return (
+    <CartProvider value={null}>
+      <CartFeature />
+    </CartProvider>
+  )
+}
+
+const CartFeature = () => {
+  const { useStore } = useCartFeature()
+  const quantity = useStore((state) => state.quantityOrders)
   return (
     <Wrapper href="/cart">
       <Icon icon={faShoppingCart} />
       <Title>Корзина</Title>
-      <Tag>1</Tag>
+      {quantity > 0 && <Tag>{quantity}</Tag>}
     </Wrapper>
   )
 }

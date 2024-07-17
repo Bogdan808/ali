@@ -4,23 +4,34 @@ import { Button } from '../../../../ui/button/Button'
 import { useProductFeature } from '../../store/productStore'
 
 const CartButton = () => {
-  const { useStore, useQuantityController, decrementAction, incrementAction } =
-    useProductFeature()
-  const { originalPrice, discountedPrice } = useStore((s) => s.product)
-  const quantity = useStore((s) => s.quantity)
-  const price = discountedPrice || originalPrice
+  const {
+    useStore,
+    useQuantityController,
+    decrementAction,
+    incrementAction,
+    useAddOrderRequest
+  } = useProductFeature()
 
+  const originalPrice = useStore((s) => s.product?.originalPrice)
+  const discountedPrice = useStore((s) => s.product?.discountedPrice)
+  const quantity = useStore((s) => s.quantity)
+
+  const price = discountedPrice || originalPrice
   return (
     <Wrapper>
       <Container>
         <Action>
-          <Button>Add to Cart</Button>
+          <Button onClick={() => useAddOrderRequest.action()}>
+            Add to Cart
+          </Button>
         </Action>
         <Counter>
           <CounterButton onClick={decrementAction}>-</CounterButton>
           <Count
             value={quantity}
-            onChange={(event) => useQuantityController.set(event.target.value)}
+            onChange={(event) =>
+              useQuantityController.set(Number(event.target.value))
+            }
           />
           <CounterButton onClick={incrementAction}>+</CounterButton>
         </Counter>

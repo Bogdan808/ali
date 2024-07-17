@@ -14,6 +14,7 @@ const rotate = keyframes`
 `
 interface ILoadingProps {
   status: ILoadingStatus
+  children: React.ReactNode
 }
 export const Loading = ({ children, status }: ILoadingProps) => (
   <>

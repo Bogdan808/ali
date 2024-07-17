@@ -1,4 +1,4 @@
-import { Header } from '../header'
+import { Header } from '../../features/header'
 import styled from 'styled-components'
 
 export const Layout = ({ children }) => {

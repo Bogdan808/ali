@@ -2,14 +2,10 @@ import { faShoppingCart } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import styled from 'styled-components'
 
-import { CartProvider, useCartFeature } from './store/cartStore'
+import { useCartFeature } from './store/cartStore'
 
 export const Cart = () => {
-  return (
-    <CartProvider value={null}>
-      <CartFeature />
-    </CartProvider>
-  )
+  return <CartFeature />
 }
 
 const CartFeature = () => {

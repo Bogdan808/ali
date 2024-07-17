@@ -5,12 +5,16 @@ import { Loading } from '../../components/loading/Loading'
 import CartButton from './components/cartButton/CartButton'
 import React from 'react'
 import styled from 'styled-components'
+import { useCartFeature } from '../header/components/Cart/store/cartStore'
 
 export const Product = () => {
   const { id } = useParams()
+  const { useRequest } = useCartFeature()
 
   return (
-    <ProductProvider value={{ id: id }}>
+    <ProductProvider
+      value={{ id: id, onSuccessOrder: () => useRequest.action() }}
+    >
       <ProductFeature />
     </ProductProvider>
   )

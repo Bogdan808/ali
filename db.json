@@ -293,12 +293,17 @@
     {
       "id": "2",
       "productId": 5,
-      "quantity": 65
+      "quantity": 69
     },
     {
       "id": "1153",
       "productId": 2,
       "quantity": 9
+    },
+    {
+      "id": "0986",
+      "productId": 24,
+      "quantity": 5
     }
   ]
 }

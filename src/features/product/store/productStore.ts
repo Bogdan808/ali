@@ -69,7 +69,7 @@ export const [useProductFeature, ProductProvider] = leitenFeature(
       },
       {
         fulfilled: () => {
-          // useProps.getState()?.onSuccessOrder()
+          useProps.getState().onSuccessOrder?.()
           useQuantityController.set(1)
         },
         rejected: ({ error, payload }) => {

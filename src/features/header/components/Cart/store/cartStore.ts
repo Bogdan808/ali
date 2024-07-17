@@ -8,7 +8,7 @@ interface IState {
 }
 
 export const [useCartFeature, CartProvider] = leitenFeature(
-  ({ mount, useProps }: IFeatureCreator<null>) => {
+  ({ mount }: IFeatureCreator<null>) => {
     const useStore = create<IState>(() => ({
       orders: [],
       quantityOrders: 0
@@ -32,7 +32,6 @@ export const [useCartFeature, CartProvider] = leitenFeature(
     return {
       useStore,
       useRequest
-      // isTriggerCartRequest: useProps.getState().isTriggerCartRequest
     }
   }
 )

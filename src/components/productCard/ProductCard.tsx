@@ -71,7 +71,7 @@ const ProductImage = styled.img<{ $theme?: IProductCardTheme }>`
   ${({ $theme }) =>
     $theme === 'list' &&
     css`
-      object-fit: cover; /* This will ensure the image covers the container without stretching */
+      object-fit: cover;
       position: absolute;
       top: 0;
       left: 0;

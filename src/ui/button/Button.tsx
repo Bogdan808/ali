@@ -8,6 +8,8 @@ type IButtonType = 'primary' | 'outline'
 interface IExtendedButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
   $buttonType?: IButtonType
   loading?: boolean
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  [key: string]: any
 }
 
 export type IButtonProps = IUIComponentProps<'button', IExtendedButtonProps>
@@ -22,8 +24,8 @@ const _Button = (properties: IButtonProps) => {
 }
 
 export const Button = styled(_Button).attrs(
-  ({ buttonType, loading, ...props }) => ({
-    $buttonType: buttonType || defaultButtonType,
+  ({ $buttonType, loading, ...props }) => ({
+    $buttonType: $buttonType || defaultButtonType,
     $loading: loading || false,
     ...props
   })
@@ -32,7 +34,7 @@ export const Button = styled(_Button).attrs(
   padding: 15px 30px;
   font-size: 18px;
   cursor: pointer;
-  ${({ $buttonType }) => buttonThemes[$buttonType]}
+  ${({ $buttonType }) => buttonThemes[$buttonType as IButtonType]}
 `
 
 const buttonThemes: Record<IButtonType, ISCCResult> = {
